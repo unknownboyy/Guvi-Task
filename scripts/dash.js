@@ -50,5 +50,5 @@ $(document).ready(function(){
     });
     $('#logout').click(function(){
         window.location.href= '../controller/logout.php';
-    })
+    });
 });
