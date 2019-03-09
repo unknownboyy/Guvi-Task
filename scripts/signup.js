@@ -3,7 +3,7 @@ $(document).ready(function(){
         var email = $('#inputEmail').val();
         var password = $('#inputPassword').val();
         $.post("../controller/signup.php",{email:email,password:password},function(data,status){
-            console.log(data.status);
+            console.log(data);
 
             if(data.status == '1'){
                 alert("Successfully Signed Up !!\nRedirecting You to Login Page...");

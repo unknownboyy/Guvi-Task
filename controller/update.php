@@ -12,8 +12,8 @@ if(isset($_POST)){
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
     }
-    $stmt = $conn->prepare("update user set name=?, address=?,country=?,state=?,city=?,phone=?,age=?");
-    $stmt->bind_param("sssssss", $name,$address,$country,$state,$city,$phone,$age);
+    $stmt = $conn->prepare("update user set name=?, address=?,country=?,state=?,city=?,phone=?,age=? where email=?");
+    $stmt->bind_param("ssssssss", $name,$address,$country,$state,$city,$phone,$age);
     $name = $_POST["name"];
     $address = $_POST["address"];
     $country = $_POST["country"];
